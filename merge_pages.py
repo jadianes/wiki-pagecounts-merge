@@ -18,7 +18,7 @@ def main():
         target_f = open(args.target_file, 'a')
 
     # here we scan every file, appending the timestamp part of the filename to the new lines in the target
-    for a_file in os.listdir(args.input_folder):
+    for a_file in os.listdir(args.input_folder).sort():
         if re.match(file_name_pattern,a_file):
             print "Merging file ", a_file, "..."
             # we have our file
