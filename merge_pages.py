@@ -20,6 +20,7 @@ def main():
     # here we scan every file, appending the timestamp part of the filename to the new lines in the target
     for a_file in os.listdir(args.input_folder):
         if re.match(file_name_pattern,a_file):
+            print "Merging file ", a_file, "..."
             # we have our file
             f = gzip.open(os.path.join(args.input_folder, a_file), 'rb')
             file_content = f.readlines()
