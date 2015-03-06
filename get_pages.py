@@ -36,7 +36,7 @@ def main():
 
     # Iterate over image ranges
     for day in range(args.from_day, args.to_day+1):
-        for hour in range(0,23):
+        for hour in range(0,24):
             url_to_download = (url_root + "/%d/%d-%02d/pagecounts-%d%02d%02d-%02d0000.gz" %
                                (args.year, args.year, args.month, args.year, args.month, day, hour))
             print "Preparing to download ", url_to_download
